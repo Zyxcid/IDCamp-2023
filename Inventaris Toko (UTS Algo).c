@@ -8,7 +8,7 @@ mencari barang berdasarkan kode & nama,
 menjual barang kepada pelanggan, dan
 menghitung stok barang.
 */
-//	Untuk membedakan kode saya dengan yang lain saya menggunakan format -> S26_nama_variabel <- Syahid absen ke-26
+//Untuk membedakan kode saya dengan yang lain saya menggunakan format -> S26_nama_variabel <- Syahid absen ke-26
 
 #include <stdio.h>
 
