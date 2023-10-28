@@ -1,35 +1,29 @@
-//nama programmer : Syahid Nurhidayatullah
-//tanggal pembuatan program: 24 Oktober 2023 
+//Nama programmer : Syahid Nurhidayatullah
+//Tanggal pembuatan program: 24-26 Oktober 2023 
 /*
-deskripsi singkat program:  Manajemen Inventaris Barang di Toko 
-Anda adalah seorang pemilik toko yang ingin mengelola inventaris barang di toko Anda. 
-Anda perlu mengembangkan program yang memungkinkan Anda untuk 
+Deskripsi singkat program:  Manajemen Inventaris Barang di Toko 
+Program ini memungkinkan Anda untuk:
 menginput data barang,
-mencari barang berdasarkan kode, 
-menjual barang kepada pelanggan, dan 
+mencari barang berdasarkan kode & nama, 
+menjual barang kepada pelanggan, dan
 menghitung stok barang.
 */
+//	Untuk membedakan kode saya dengan yang lain saya menggunakan format -> S26_nama_variabel <- Syahid absen ke-26
 
-//untuk membedakan kode saya dengan yang lain saya menggunakan format -> S26_nama_variabel <- Syahid absen ke-26
 #include <stdio.h>
 
-//   6.	Konstanta
+//   Konstanta
 #define S26_max_barang 99
 
-/*
-o	String untuk nama barang, produsen, kode barang, dan nama pelanggan.
-o	Integer untuk tahun pembuatan, harga, dan tanggal penjualan.
-o	Boolean atau status untuk menandai apakah barang tersedia atau habis.
-*/
-
+// variabel untuk menyimpan data barang
 char S26_nama_barang[S26_max_barang][39], S26_produsen[S26_max_barang][39], S26_kode_barang[S26_max_barang][39];
-char S26_nama_pelanggan[S26_max_barang][39];
-int S26_tahun_pembuatan[S26_max_barang], S26_harga[S26_max_barang], S26_tanggal_penjualan[S26_max_barang];
+int S26_tahun_pembuatan[S26_max_barang], S26_harga[S26_max_barang];
 
 // boolean untuk menentukan tersedia atau tidaknya barang, berisi nilai 1 atau 0
 int S26_tersedia[S26_max_barang];
 
-// variabel untuk menyimpan data pembelian
+// variabel untuk menyimpan data penjualan
+char S26_nama_pelanggan[S26_max_barang][39];
 int S26_tanggal[S26_max_barang], S26_bulan[S26_max_barang], S26_tahun[S26_max_barang];
 
 // variabel untuk menghitung total jumlah barang
@@ -44,7 +38,6 @@ void S26_info_barang() {
         printf("Belum ada barang\n");
         return;
     }	
-	printf("-- Stok barang saat ini: %d --\n", S26_jumlah_barang);
 	int i;
 	for (i = 0; i < S26_jumlah_barang; i++) {
 		if (S26_jumlah_barang != 0 && S26_tersedia[i] == 1) {
@@ -55,7 +48,7 @@ void S26_info_barang() {
             printf("produsen: %s\n", S26_produsen[i]);
             printf("Tahun pembuatan: %d\n", S26_tahun_pembuatan[i]);
             printf("Kode barang: %s\n", S26_kode_barang[i]);
-            printf("Harga barang: %d\n", S26_harga[i]);
+            printf("Harga barang: Rp.%d\n", S26_harga[i]);
             printf("---------------------\n");
         }
         else {
@@ -65,7 +58,7 @@ void S26_info_barang() {
             printf("Status barang: Tidak tersedia\n");
             printf("Nama pelanggan: %s\n", S26_nama_pelanggan[i]);
             printf("Tanggal penjualan: %d-%d-%d\n", S26_tanggal[i], S26_bulan[i], S26_tahun[i]);
-            printf("Harga barang: %d\n", S26_harga[i]);
+            printf("Harga barang: Rp.%d\n", S26_harga[i]);
             printf("---------------------\n");
 		}
     }
@@ -111,7 +104,7 @@ void S26_cari_barang() {
 	            printf("Produsen: %s\n", S26_produsen[i]);
 	            printf("Tahun pembuatan: %d\n", S26_tahun_pembuatan[i]);
 	            printf("Kode barang: %s\n", S26_kode_barang[i]);
-	            printf("Harga barang: %d\n", S26_harga[i]);
+	            printf("Harga barang: Rp.%d\n", S26_harga[i]);
 	            printf("---------------------\n");
 	            ditemukan = 1;
 				break;
@@ -144,7 +137,7 @@ void S26_jual_barang() {
 			    printf("Produsen: %s\n", S26_produsen[i]);
 	            printf("Tahun pembuatan: %d\n", S26_tahun_pembuatan[i]);
 	            printf("Kode barang: %s\n", S26_kode_barang[i]);
-	            printf("Harga barang: %d\n", S26_harga[i]);
+	            printf("Harga barang: Rp.%d\n", S26_harga[i]);
 				ditemukan = 1;
 	            
 	            char jual;
@@ -152,7 +145,7 @@ void S26_jual_barang() {
 	            scanf("%c", &jual);
 	            switch (jual) {
 	            	case 'Y':
-	            		printf("Barang dijual dengan harga: %d\n", S26_harga[i]);
+	            		printf("Barang dijual dengan harga: Rp.%d\n", S26_harga[i]);
 	            		printf("Masukkan nama pelanggan: ");
 	            		scanf("%s", &S26_nama_pelanggan[i]);
 	            		printf("Masukkan tanggal saat ini (angka)\n");
@@ -183,6 +176,10 @@ void S26_jual_barang() {
     }
 }
 
+S26_cek_stok_barang() {
+	printf("-- Barang di inventaris saat ini: %d --\n", S26_jumlah_barang);	
+}
+
 int main() {
     int pilihan;
     char nama_user[39];
@@ -196,6 +193,7 @@ int main() {
         printf("2. Tambah Barang\n");
         printf("3. Cari Barang\n");
         printf("4. Jual Barang\n");
+        printf("5. Cek Stok Barang\n");
         printf("9. Keluar\n");
         printf("Pilih: ");
         scanf("%d", &pilihan);
@@ -213,6 +211,9 @@ int main() {
                 break;
 			case 4:
                 S26_jual_barang();
+                break;
+			case 5:
+                S26_cek_stok_barang();
                 break;
             case 9:
                 printf("Keluar dari program\n");
