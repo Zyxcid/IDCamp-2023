@@ -1,4 +1,2 @@
 # Improvekuy
-Project for improving my code
-
-just a random project that I found interesting
+Random project that I found interesting and can help me improve my code
