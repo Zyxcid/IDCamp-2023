@@ -4,19 +4,19 @@
     padding: 0px;
     font-family: 'Playpen Sans', cursive;
 }
-.container_foto_kelas, .krs, .foto_dosen, .pilihan_menu:hover, nav, .container_info{
+.container_foto_kelas, .krs, .foto_dosen, .pilihan_menu:hover, nav, .container_info, .data_mahasiswa li, .foto_mahasiswa{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 header {
     font-style: italic;
-    background-color: rgba(210, 180, 140, 0.6);
+    background-color: rgba(184, 153, 113, 0.6);
     height: 15rem;
 }
 #creator {
     font-weight: lighter;
     font-size: smaller;
     margin-left: 5px;
-    color: rgb(207, 172, 125);
+    color: #634c3b;
 }
 nav {
     display: flex;
@@ -65,12 +65,10 @@ header h1 {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     height: 100px;
-    
 }
   
 .pilihan_menu_content a {
     display: block;
-    color: black;
     text-wrap: nowrap;
     color: #FEECC7;
     background-color: #7e593e;
@@ -92,7 +90,7 @@ header h1 {
 
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 9px;
     height: 6px;
 }
 ::-webkit-scrollbar-track {
@@ -121,7 +119,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.container_krs, .container_info, .container_profile{
+.container_krs, .container_info {
     background-color: navajowhite;
     width: 90%;
     margin: auto;
@@ -131,25 +129,36 @@ body{
 }
 
 .container_profile {
+    margin: auto;
+    width: 70%;
     background-color: #976f52;
     color: #2c2823;
-    border-radius: 5px;
     padding: 2%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
     margin-top: 5%;
     margin-bottom: 5%;
+    border-radius: 10px;
 }
+
 
 .profile_mahasiswa {
     display: flex;
-    justify-content: space-between;
+    margin: 10px;
+}
+.data_mahasiswa {
+    padding: 0;
+    list-style-type: none;
+}
+.data_mahasiswa li {
+    margin: 10px;
+    background-color: #FEECC7;
+    border-radius: 4px;
+    padding: 8px 18px;
+    pointer-events: none;
 }
 
 .container_foto_mahasiswa {
-    margin-top: 10px;
     text-align: center;
+    margin: auto;
 }
 
 .foto_mahasiswa {
@@ -246,10 +255,41 @@ th {
 
 footer {
     width: 100%;
-    height: 500px;
+    height: 250px;
     background-color: #7e593e;
     box-shadow: 0 0 10px 0 black;
 }
+
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:10px;
+  }
+  
+.footer-basic .social > a {
+    font-size:24px;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid bisque;
+    margin:13px 8px;
+    color:inherit;
+    opacity:0.75;
+}
+  
+.footer-basic .social > a:hover {
+    opacity:0.9;
+}
+  
+.footer-basic .copyright {
+    text-align:center;
+    font-size:13px;
+    color: bisque;
+    margin-bottom:0;
+}
+
 
 @media only screen and (max-width: 742px) {
 
@@ -257,10 +297,10 @@ footer {
         margin: auto;
     }
     .pilihan_menu:hover .pilihan_menu_content {
-        transform: translate(-65%, 0px);
+        transform: translate(-50%, 0px);
     }
 
-    .container_info {
+    .container_info, .profile_mahasiswa {
         flex-direction: column;
     }
 
@@ -282,6 +322,7 @@ footer {
         height: 180px;
     }
 }
+
 @media only screen and (max-width: 360px) {
     .foto_dosen {
         width: 140px;
