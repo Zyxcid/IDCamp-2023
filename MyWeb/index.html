@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,20 +20,46 @@
     <nav>
         <a href="#home" class="pilihan_menu">Home</a>
         <a href="#krs" class="pilihan_menu">KRS</a>
-        <a href="#info_kelas" class="pilihan_menu">Info Kelas</a>
+        <div class="pilihan_menu">
+            Info Kelas
+            <div class="pilihan_menu_content">
+                <a href="#Kalku" >Kalkulus dan Aljabar</a>
+                <a href="#Fister">Fisika Terapan</a>
+                <a href="#Elkom">Elektronika Komputer</a>
+                <a href="#Algo">Algoritma Pemrograman</a>
+                <a href="#Prak_Algo">Praktikum Algoritma Pemrograman</a>
+                <a href="#Prak_Fister">Praktikum Fisika Terapan</a>
+                <a href="#KSTI">Konsep Sistem dan Teknologi Informasi</a>
+                <a href="#Sistem_Digi">Sistem Digital</a>
+                <a href="#Pencas">Pendidikan Pancasila</a>
+                <a href="#PKN">Pendidikan Kewarganegaraan</a>
+            </div>
+        </div>
     </nav>
 
     
     <main>
-        <!--Home = Foto fakultas teknik-->
-        <div class="home" id="home">
-            <h1>Fakultas Teknik UNP</h1>
+        <!--Home, Profile mahasiswa-->
+        <div class="container_profile" id="home">
+            <h1>Profile Mahasiswa</h1>
             <p>Selamat datang di pesonal study schedule pengguna!</p>
             <p>website ini dirancang untuk menampilkan jadwal mata kuliahmu sesuai dengan jurusanmu di universitasmu</p>
-            <div class="home_image">
-                <img src="image/Foto_111.jpg" alt="">
+            <div class="profile_mahasiswa">
+                <div class="data_mahasiswa">
+                    <ul>
+                        <li>Universitas Negeri Padang</li>
+                        <li>Fakultas Teknik</li>
+                        <li>Prodi Informatika</li>
+                        <li>Angkatan 2023</li>
+                    </ul>
+                </div>
+                <figure class="container_foto_mahasiswa">
+                    <img class="foto_mahasiswa" src="image/Mahasiswa.webp" alt="Foto Mahasiswa">
+                    <figcaption>Mahasiswa</figcaption>
+                </figure>
             </div>
         </div>
+    
 
 
         <!--KRS = Kartu Rencana Studi-->
@@ -88,7 +114,7 @@
                 </tr>
                 <tr>
                     <td>INF1.62.1007</td>
-                    <td class="tdmatkul"><a href="#Algo">Algoritma Pemograman</a></td>
+                    <td class="tdmatkul"><a href="#Algo">Algoritma Pemrograman</a></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -99,7 +125,7 @@
                 </tr>
                 <tr>
                     <td>INF1.62.1008</td>
-                    <td class="tdmatkul"><a href="#Prak_Algo">Praktikum Algoritma Pemograman</a></td>
+                    <td class="tdmatkul"><a href="#Prak_Algo">Praktikum Algoritma Pemrograman</a></td>
                     <td></td>
                     <td></td>
                     <td>10:40 - 15:00</td>
@@ -225,36 +251,36 @@
             </div>
             <div class="container_info" id="Algo">
                 <article id="box_kiri_info">
-                    <h2 class="mata_kuliah">Algoritma Pemograman</h2>
+                    <h2 class="mata_kuliah">Algoritma Pemrograman</h2>
                     <p>Kuliah dilaksanakan di kelas E66</p>
                     <p>Dosen Mata Kuliah:</p>
                     <figure class="container_foto_dosen">
-                        <img class="foto_dosen" src="image/dosen.jpeg" alt="Foto dosen Algoritma Pemograman">
+                        <img class="foto_dosen" src="image/dosen.jpeg" alt="Foto dosen Algoritma Pemrograman">
                         <figcaption>nama dosen</figcaption>
                     </figure>
                     
                 </article>
                 <aside id= "box_kanan_info">
                     <figure class="container_foto_kelas">
-                        <img class="foto_kelas" src="image/kelas_kalkulus_dan_aljabar.jpg" alt="Foto kelas Algoritma Pemograman">
+                        <img class="foto_kelas" src="image/kelas_kalkulus_dan_aljabar.jpg" alt="Foto kelas Algoritma Pemrograman">
                         <figcaption>E66</figcaption>
                     </figure>
                 </aside>
             </div>
             <div class="container_info" id="Prak_Algo">
                 <article id="box_kiri_info">
-                    <h2 class="mata_kuliah">Praktikum Algoritma Pemograman</h2>
+                    <h2 class="mata_kuliah">Praktikum Algoritma Pemrograman</h2>
                     <p>Kuliah dilaksanakan di kelas E66</p>
                     <p>Dosen Mata Kuliah:</p>
                     <figure class="container_foto_dosen">
-                        <img class="foto_dosen" src="image/dosen.jpeg" alt="Foto dosen Praktikum Algoritma Pemograman">
+                        <img class="foto_dosen" src="image/dosen.jpeg" alt="Foto dosen Praktikum Algoritma Pemrograman">
                         <figcaption>nama dosen</figcaption>
                     </figure>
                     
                 </article>
                 <aside id= "box_kanan_info">
                     <figure class="container_foto_kelas">
-                        <img class="foto_kelas" src="image/kelas_kalkulus_dan_aljabar.jpg" alt="Foto kelas Praktikum Algoritma Pemograman">
+                        <img class="foto_kelas" src="image/kelas_kalkulus_dan_aljabar.jpg" alt="Foto kelas Praktikum Algoritma Pemrograman">
                         <figcaption>E66</figcaption>
                     </figure>
                 </aside>
