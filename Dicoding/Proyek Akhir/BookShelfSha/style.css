@@ -22,13 +22,26 @@ body {
 }
 
 #app h2 {
-    font-size: 2vw;
     padding-left: 5%;
 }
 
 .bookStatus {
     display: flex;
     justify-content: space-between;
+    height: 20px;
+}
+
+
+#addBook div {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+#addBook div label {
+    margin: 0 10px;
+}
+#isComplete {
+    width: 20px;
     height: 20px;
 }
 
@@ -106,9 +119,9 @@ button {
 button:active {
     background-color: rgba(141, 92, 0, 0.507);
 }
-.bookButton {
+
+#bookButton {
     color: bisque;
-    margin: 10px 0 0 10px;
 }
 
 #searchInput{
