@@ -1,0 +1,132 @@
+header h1 {
+    margin: 0 0 45px 0;
+    padding: 10px;
+    color: antiquewhite;
+    background-color: rgb(141, 92, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body {
+    font-family: cursive;
+    margin: 30px 0;
+    color: antiquewhite;
+    background-color: blanchedalmond;
+}
+
+#app {
+    padding: 2%;
+    margin: auto;
+    background-color: rgb(141, 92, 0);
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#app h2 {
+    font-size: 2vw;
+    padding-left: 5%;
+}
+
+.bookStatus {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+}
+
+.removeBtn {
+    width: 22px;
+    height: 22px;
+}
+.removeBtn:hover {
+    background-color: antiquewhite;
+}
+.checkBox {
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    padding: 5px;
+    margin: 2px 0px;
+    background-color: bisque;
+}
+
+.rakBuku {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: rgb(141, 92, 0);
+    background-color: bisque;
+}
+
+.rakBuku p {
+    -webkit-text-stroke: .3px black;
+    border: 5px solid rgb(141, 92, 0);
+    border-right: 0;
+    border-left: 0;
+    margin: 0;
+    padding-left: 10px;
+}
+
+#belumBaca, #dahBaca {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#addBook {
+    display: flex;
+    flex-direction: column;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 2px 1px rgb(141, 92, 0) inset;
+    padding: 8px;
+    margin: -1px;
+    width: 100px;
+    min-height: 140px;
+    border: 2px solid  rgb(141, 92, 0);
+    overflow-wrap: break-word;
+}
+.book:hover {
+    background-color: rgba(141, 92, 0, 0.226);
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
+.book button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: rgba(141, 92, 0, 0.26);
+    padding: 5px;
+    width: 100px;
+}
+button:active {
+    background-color: rgba(141, 92, 0, 0.507);
+}
+.bookButton {
+    color: bisque;
+    margin: 10px 0 0 10px;
+}
+
+#searchInput{
+    width: 70%;
+}
+
+.search button {
+    color: bisque;
+    width: 28px;
+    height: 28px;
+}
+
+#confirmation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#deleteDialog p{
+    border: none;
+}

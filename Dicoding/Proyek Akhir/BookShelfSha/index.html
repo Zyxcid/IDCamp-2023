@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>App Rak Buku</title>
+</head>
+<body>
+    <header>
+        <h1>App Rak Buku</h1>
+    </header>
+
+    <main id="app">
+        
+        <article class="rakBuku">
+            <p>Buku yang belum dibaca</p>
+            <div id="belumBaca"></div>
+            <p>Buku yang sudah dibaca</p>
+            <div id="dahBaca"></div>
+            <dialog id="deleteDialog">
+                <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+                <div id="confirmation">
+                    <button id="confirmDelete">Ya</button>
+                    <button id="cancelDelete">Batal</button>    
+                </div>
+            </dialog>
+        </article>
+        
+        <article id="addBook">
+            <h2>Tambah Buku ke Rak</h2>
+            <label for="judul">Judul:</label>
+            <input type="text" id="title" required>
+            <label for="penulis">Penulis:</label>
+            <input type="text" id="author" required>
+            <label for="tahun">Tahun:</label>
+            <input type="text" id="year" required>
+            <button class="bookButton" onclick="addBook()">Tambah Buku</button>
+        </article>
+
+        <article id="searchBook">
+            <h2>Cari Buku dari Rak</h2>
+            <div class="search">
+                <input placeholder="Judul, penulis atau tahun" type="text" id="searchInput">
+                <button onclick="searchBook()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </article>
+
+    </main>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/3dc65d48bd.js" crossorigin="anonymous"></script>
+</body>
+</html>
