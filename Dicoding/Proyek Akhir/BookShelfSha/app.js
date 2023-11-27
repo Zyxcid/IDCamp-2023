@@ -13,10 +13,8 @@ function updateLocalStorage() {
     localStorage.setItem('books', JSON.stringify(books));
 }
 
-// Membuat objek array buku-buku yang berisi buku
-let books = [
-    { id: Date.now(), title: 'Atomic Habit', author: 'James Clear', year: 2018, isComplete: false },
-];
+// Membuat objek array yang berisi buku
+let books = [];
 
 // Menampilkan buku di rak
 function displayBooks(booksToDisplay = books) {
@@ -90,23 +88,27 @@ function addBook() {
     const titleInput = document.getElementById('title');
     const authorInput = document.getElementById('author');
     const yearInput = document.getElementById('year');
-    
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const year = document.getElementById('year').value;
+    const isCompleteCheckbox = document.getElementById('isComplete');
 
-    if (title && author && year) {
-        const newBook = { id: Date.now(), title, author, year };
+    const title = titleInput.value;
+    const author = authorInput.value;
+    const year = parseInt(yearInput.value);
+    const isComplete = isCompleteCheckbox.checked;
+
+
+    if (title && author && !isNaN(year) && year > 0) {
+        const newBook = { id: Date.now(), title, author, year, isComplete};
         books.push(newBook);
         displayBooks();
         
         titleInput.value = '';
         authorInput.value = '';
         yearInput.value = '';
+        isCompleteCheckbox.checked = false;
         updateLocalStorage();
-    }
+    } 
     else {
-        alert('Tolong masukkan judul, penulis dan tahun buku.');
+        alert('Tolong masukkan judul, penulis, dan tahun buku yang valid.');
     }
 }
 
