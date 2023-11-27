@@ -35,7 +35,11 @@
             <input type="text" id="author" required>
             <label for="tahun">Tahun:</label>
             <input type="text" id="year" required>
-            <button class="bookButton" onclick="addBook()">Tambah Buku</button>
+            <div>
+                <button id="bookButton" onclick="addBook()">Tambah Buku</button>
+                <label for="isComplete">Sudah dibaca</label>
+                <input type="checkbox" id="isComplete">
+            </div>
         </article>
 
         <article id="searchBook">
