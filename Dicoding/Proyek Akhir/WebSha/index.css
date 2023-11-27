@@ -252,6 +252,13 @@ footer {
     padding: 40px;
 }
 
+#creator {
+    font-weight: lighter;
+    font-size: smaller;
+    margin-left: 5px;
+    color: #634c3b;
+}
+
 footer .sosial {
     text-align:center;
     padding-bottom:10px;
